@@ -8,25 +8,29 @@ class Program
         string userPercentage = Console.ReadLine();
         int numPercentage = int.Parse(userPercentage);
 
+        string letter = "";
+
         if (numPercentage >= 90)
         {
-            Console.WriteLine($"you've got an A with grade of {numPercentage}");
+            letter = "A";
         }
-        else if (numPercentage >= 80 && numPercentage < 90)
+        else if (numPercentage >= 80)
         {
-            Console.WriteLine($"you've got a b with a grade of {numPercentage}");
+            letter = "B";
         }
-        else if (numPercentage >= 70 && numPercentage < 80)
+        else if (numPercentage >= 70)
         {
-            Console.WriteLine($"you've got a c with a grade of {numPercentage}");
+            letter = "C";
         }
-        else if (numPercentage >= 60 && numPercentage < 70)
+        else if (numPercentage >= 60)
         {
-            Console.WriteLine($"you've got a d with a grade of {numPercentage}");
+            letter = "D";
         }
         else
         {
-            Console.WriteLine($"you've got a f with a grade of {numPercentage}");
+            letter = "F";
         }
+
+        Console.WriteLine(letter);
     }
 }
