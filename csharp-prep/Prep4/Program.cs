@@ -23,15 +23,24 @@ class Program
         }
 
         int sum = 0;
+        float average = 0;
+        int largest_number = 0;
 
         foreach (int number in numbers)
         {
-            sum = sum + number;
-            Console.WriteLine(number);
+            sum += number;
+           // Console.WriteLine(number);
+           if (number > largest_number)
+            {
+                largest_number = number;
+            }
         }
-        
+    
+        average = ((float)sum) / numbers.Count;
         Console.WriteLine("-----------------------------");
         Console.WriteLine("total items " + numbers.Count);
         Console.WriteLine("Total sum: " + sum);
+        Console.WriteLine("Total average: " + average);
+        Console.WriteLine("The largest number is: " + largest_number);
     }
 } 
